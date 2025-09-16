@@ -1,0 +1,17 @@
+<h1>List Page</h1>
+
+<h2></h2>
+
+{{#if isAdmin}}
+  <button>Delete Users</button>
+{{else}}
+  <p>You have no permission to delete users</p>
+{{/if}}
+
+<ul>
+  {{#each users}}
+    {{>user}}
+  {{else}}
+    <p>No users!</p>
+  {{/each}}
+</ul>
