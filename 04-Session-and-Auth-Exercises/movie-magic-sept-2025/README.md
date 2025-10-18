@@ -136,3 +136,9 @@ SoftUni JS Back-End Course Workshop
 -  [x] Add password hashing `npm i bcrypt`
 
 ### Login
+
+-  [x] Add login page
+-  [] Handle login page
+-  [] Validate user
+-  [] validate password
+-  [] Create jwt token
