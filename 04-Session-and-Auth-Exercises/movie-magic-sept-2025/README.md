@@ -162,9 +162,13 @@ SoftUni JS Back-End Course Workshop
 -  [x] Group navigation by user type (all, authenticated and guest)
 -  [x] Add auth info to hbs context
 
-### Edit movies
+### Show creator control buttons
+
+- [] 
 
 ### Delete movies
+
+### Edit movies
 
 ### Bonus
 
