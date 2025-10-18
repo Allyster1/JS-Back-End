@@ -142,3 +142,4 @@ SoftUni JS Back-End Course Workshop
    -  [x] Validate user
    -  [x] validate password
    -  [x] Create jwt token
+   -  [x] Return token to client `using cookie`
