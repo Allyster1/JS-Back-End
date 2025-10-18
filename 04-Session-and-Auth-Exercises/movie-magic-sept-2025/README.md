@@ -171,6 +171,8 @@ SoftUni JS Back-End Course Workshop
 
 ### Delete movies
 
+-  [x] add delete action
+
 ### Edit movies
 
 ### Bonus
