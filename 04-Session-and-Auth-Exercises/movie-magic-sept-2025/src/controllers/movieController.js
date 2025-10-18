@@ -2,6 +2,8 @@ import { Router } from "express";
 import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
 
+import { isAuth, isGuest } from "../middlewares/authMiddleware.js";
+
 const movieController = Router();
 
 movieController.get("/create", isAuth, (req, res) => {

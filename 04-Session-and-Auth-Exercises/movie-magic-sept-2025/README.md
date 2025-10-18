@@ -159,6 +159,9 @@ SoftUni JS Back-End Course Workshop
 
 ### Dynamic Navigation
 
+-  [x] Group navigation by user type (all, authenticated and guest)
+-  [x] Add auth info to hbs context
+
 ### Edit movies
 
 ### Delete movies

@@ -1,6 +1,8 @@
 import { Router } from "express";
 import authService from "../services/authService.js";
 
+import { isAuth, isGuest } from "../middlewares/authMiddleware.js";
+
 const authController = Router();
 
 authController.get("/register", isGuest, (req, res) => {

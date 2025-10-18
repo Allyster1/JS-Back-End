@@ -1,17 +1,21 @@
 import jwt from "jsonwebtoken";
 import { JWT_SECRET } from "../config/constants.js";
 
-export default function authMiddleware(req, res, next) {
-   const token = req.cookies("auth");
+export function authMiddleware(req, res, next) {
+   const token = req.cookies["auth"];
 
    if (!token) return next();
 
    try {
-      const decodeToken = jwt.verify(token, JWT_SECRET);
+      const decodedToken = jwt.verify(token, JWT_SECRET);
 
       // Attach auth user to request
-      req.user = decodeToken;
+      req.user = decodedToken;
       req.isAuthenticated = true;
+
+      // Add to handlebars context
+      res.locals.isAuthenticated = true;
+      res.locals.users = decodedToken;
 
       next();
    } catch (err) {
@@ -29,7 +33,7 @@ export function isAuth(req, res, next) {
 }
 
 export function isGuest(req, res, next) {
-   if (!req.isAuthenticated) return res.redirect("/");
+   if (req.isAuthenticated) return res.redirect("/");
 
    next();
 }
