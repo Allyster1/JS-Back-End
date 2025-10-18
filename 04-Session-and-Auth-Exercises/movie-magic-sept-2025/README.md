@@ -146,10 +146,14 @@ SoftUni JS Back-End Course Workshop
 
 ### Logout
 
--  [x] add logout action
+-  [x] Add logout action
 -  [x] clear cookie
 
 ### Authorization
+
+-  [x] Install cookie parser `npm i cookie-parser`
+-  [x] Add auth middleware
+-  [x] Validate user authentication
 
 ### Dynamic Navigation
 
