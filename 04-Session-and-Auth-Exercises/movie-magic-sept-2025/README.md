@@ -177,10 +177,11 @@ SoftUni JS Back-End Course Workshop
 ### Edit movies
 
 -  [x] Add edit page
--  [] Add dynamiv movie data to page
+-  [x] Add dynamiv movie data to page
 
 ### Bonus
 
 -  [] Automatic login on register
 -  [] Invalidate token on logout
 -  [] Refresh token
+-  [] Edit categories
