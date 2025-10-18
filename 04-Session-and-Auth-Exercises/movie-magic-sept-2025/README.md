@@ -171,10 +171,13 @@ SoftUni JS Back-End Course Workshop
 
 ### Delete movies
 
--  [x] add delete action
+-  [x] Add delete action
 -  [x] Add creator validation
 
 ### Edit movies
+
+-  [x] Add edit page
+-  [] Add dynamiv movie data to page
 
 ### Bonus
 
