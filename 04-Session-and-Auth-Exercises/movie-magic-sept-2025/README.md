@@ -124,8 +124,15 @@ SoftUni JS Back-End Course Workshop
 
 ### Initial Setup
 
-= [x] add resources
+-  [x] add resources
 
 ### Registration
 
-= []
+-  [x] Add Auth controller
+-  [] Add registration page (action and template)
+-  [] Add User model
+-  [] Add user service
+-  [] Handle registration (create user in db)
+-  [] Add password hashing
+
+### Login
