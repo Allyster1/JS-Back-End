@@ -122,6 +122,10 @@ SoftUni JS Back-End Course Workshop
 
 ## Workshop 3 - Session and Authentication
 
+### Initial Setup
+
+= [x] add resources
+
 ### Registration
 
 = []
