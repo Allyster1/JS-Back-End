@@ -143,3 +143,22 @@ SoftUni JS Back-End Course Workshop
    -  [x] validate password
    -  [x] Create jwt token
    -  [x] Return token to client `using cookie`
+
+### Logout
+
+-  [x] add logout action
+-  [x] clear cookie
+
+### Authorization
+
+### Dynamic Navigation
+
+### Edit movies
+
+### Delete movies
+
+### Bonus
+
+-  [] Automatic login on register
+-  [] Invalidate token on logout
+-  [] Refresh token
