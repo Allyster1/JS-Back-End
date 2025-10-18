@@ -138,7 +138,7 @@ SoftUni JS Back-End Course Workshop
 ### Login
 
 -  [x] Add login page
--  [] Handle login page
--  [] Validate user
--  [] validate password
--  [] Create jwt token
+-  [x] Handle login page
+   -  [x] Validate user
+   -  [x] validate password
+   -  [x] Create jwt token
