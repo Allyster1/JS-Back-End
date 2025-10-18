@@ -165,7 +165,9 @@ SoftUni JS Back-End Course Workshop
 ### Show creator control buttons
 
 -  [x] Add edit and delete buttons on details page
--  [x] show buttons only for creators
+-  [x] Add creator as relation to movies
+-  [x] Add user as creator in movie create
+-  [] show buttons only for creators
 
 ### Delete movies
 
