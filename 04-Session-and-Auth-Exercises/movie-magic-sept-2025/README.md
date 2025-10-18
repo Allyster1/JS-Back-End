@@ -154,6 +154,7 @@ SoftUni JS Back-End Course Workshop
 -  [x] Install cookie parser `npm i cookie-parser`
 -  [x] Add auth middleware
 -  [x] Validate user authentication
+-  [x] Add route guard
 
 ### Dynamic Navigation
 
