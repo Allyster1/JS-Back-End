@@ -133,6 +133,6 @@ SoftUni JS Back-End Course Workshop
 -  [x] Add User model
 -  [x] Add user service
 -  [x] Handle registration (create user in db)
--  [] Add password hashing
+-  [x] Add password hashing `npm i bcrypt`
 
 ### Login
