@@ -15,7 +15,7 @@ const movieSchema = new Schema({
          ref: "Cast",
       },
    ],
-   Creator: {
+   creator: {
       type: Types.ObjectId,
       ref: "User",
    },
