@@ -177,7 +177,8 @@ SoftUni JS Back-End Course Workshop
 ### Edit movies
 
 -  [x] Add edit page
--  [x] Add dynamiv movie data to page
+-  [x] Add dynamic movie data to page
+-  [x] Handle edit button
 
 ### Bonus
 
