@@ -204,6 +204,7 @@ SoftUni JS Back-End Course Workshop
 -  [x] Add static error notification container
 -  [x] User register error handling
 -  [x] render error container conditionally
+-  [x] Retain form data on error
 
 ### Bonuses
 

@@ -17,7 +17,7 @@ authController.post("/register", isGuest, async (req, res) => {
       res.redirect("/");
    } catch (err) {
       const errorMessage = Object.values(err.errors).at(0).message;
-      res.status(400).render("auth/register", { error: errorMessage });
+      res.status(400).render("auth/register", { error: errorMessage, user: userData });
    }
 });
 
@@ -33,8 +33,8 @@ authController.post("/login", isGuest, async (req, res) => {
       res.cookie("auth", token);
       res.redirect("/");
    } catch (err) {
-      const errorMessage = err && err.message ? err.message : "Login failed";
-      res.status(400).render("auth/login", { error: errorMessage });
+      const errorMessage = Object.values(err.errors).at(0).message;
+      res.status(400).render("auth/login", { error: errorMessage, user: userData });
    }
 });
 
