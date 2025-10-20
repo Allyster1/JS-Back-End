@@ -190,6 +190,8 @@ SoftUni JS Back-End Course Workshop
 
 ## Workshop 4 - Validation and Error Handling
 
+-  [x] Add project resources
+
 ### Validation
 
 -  [x] Validate movie
@@ -199,8 +201,8 @@ SoftUni JS Back-End Course Workshop
 
 ### Error Handling
 
--  [x] Add project resources
--  [] Add static error notification container
+-  [x] Add static error notification container
+-  [x] User register error handling
 
 ### Bonuses
 
