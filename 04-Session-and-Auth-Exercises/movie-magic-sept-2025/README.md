@@ -208,7 +208,7 @@ SoftUni JS Back-End Course Workshop
 -  [x] Extract get error message
 -  [x] User login error handling
 -  [x] Create movie error handling
--  [] Bonus: retain movie category after error
+-  [x] Bonus: retain movie category after error
 
 ### Bonuses
 
