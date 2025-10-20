@@ -7,6 +7,7 @@ export function authMiddleware(req, res, next) {
    if (!token) return next();
 
    try {
+      // TODO make it async
       const decodedToken = jwt.verify(token, JWT_SECRET);
 
       // Attach auth user to request

@@ -186,3 +186,12 @@ SoftUni JS Back-End Course Workshop
 -  [x] Automatic login on register
 -  [] Invalidate token on logout
 -  [] Refresh token
+-  [] async JWT
+
+## Workshop 4 - Validation and Error Handling
+
+### Validation
+
+-  [x] Validate movie
+-  [] Validate cast
+-  [] Validate user
