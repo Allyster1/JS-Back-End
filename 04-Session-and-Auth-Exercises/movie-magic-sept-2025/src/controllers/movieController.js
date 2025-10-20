@@ -3,6 +3,7 @@ import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
 
 import { isAuth } from "../middlewares/authMiddleware.js";
+import { getErrorMessage } from "../utils/errorUtils.js";
 
 const movieController = Router();
 
@@ -18,9 +19,14 @@ movieController.post("/create", isAuth, async (req, res) => {
    const movieData = req.body;
    const creatorId = req.user.id;
 
-   await movieService.create(movieData, creatorId);
+   try {
+      await movieService.create(movieData, creatorId);
 
-   res.redirect("/");
+      res.redirect("/");
+   } catch (err) {
+      const errorMessage = getErrorMessage(err);
+      res.status(400).render("movies/create", { error: errorMessage, movie: movieData });
+   }
 });
 
 movieController.get("/:movieId/details", async (req, res) => {
