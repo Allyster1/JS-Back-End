@@ -7,6 +7,8 @@ export default {
       const userExists = await User.exists({ email: userData.email });
       if (userExists) throw new Error("User already exists!");
 
+      // if (userData.password !== userData.rePassword) throw new Error("Password missmatch!");
+
       const user = await User.create(userData);
 
       const token = generateAuthToken(user);

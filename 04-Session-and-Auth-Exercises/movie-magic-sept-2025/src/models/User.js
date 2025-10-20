@@ -17,6 +17,29 @@ const userSchema = new Schema({
    },
 });
 
+// Validate passwords with virtual property
+userSchema
+   .virtual("rePassword")
+   .get(function () {
+      return this._rePassword;
+   })
+   .set(function (value) {
+      this._rePassword = value;
+   });
+
+userSchema.pre("validate", async function () {
+   if (this.isNew && this.password !== this.rePassword) {
+      // throw new Error
+      this.invalidate("rePassword", "Password missmatch");
+   }
+});
+
+// Validate unique email on user creation
+// userSchema.pre("validate", async function () {
+//    const userExists = await this.constructor.exists({ email: userData.email });
+//    if (userExists) throw new Error("User already exists!");
+// });
+
 userSchema.pre("save", async function () {
    // Generate salt
    //  const salt = await bcrypt.genSalt(12);
