@@ -30,7 +30,7 @@ const movieSchema = new Schema({
    year: {
       type: Number,
       min: [1900, "Movie cannot be less than 1900"],
-      max: [2024, "Movie cannot be greater than 2024"], // TODO: dynamic year check
+      max: [2024, "Movie cannot be greater than 2024"],
       required: [true, "Movie year is required!"],
    },
    imageUrl: {

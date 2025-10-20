@@ -193,5 +193,10 @@ SoftUni JS Back-End Course Workshop
 ### Validation
 
 -  [x] Validate movie
--  [] Validate cast
+-  [x] Validate cast
 -  [] Validate user
+
+### Bonuses
+
+-  [] Add dynamic year check to movie schema
+-  [] Character name
