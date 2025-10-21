@@ -211,10 +211,13 @@ SoftUni JS Back-End Course Workshop
 -  [x] Bonus: retain movie category after error
 -  [x] Cast create error handling
 -  [x] Add details page error handling
+-  [x] Error handling on movie edit page
+-  [x] Fix movie categories
 
 ### Bonuses
 
 -  [] Guard edit from non creator
+-  [] Redirect with message
 -  [] Add dynamic year check to movie schema
 -  [] Character name
 -  [] Add more password validation
