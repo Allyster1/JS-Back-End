@@ -6,6 +6,7 @@ import routes from "./routes.js";
 import cookieParser from "cookie-parser";
 
 import { authMiddleware } from "./middlewares/authMiddleware.js";
+import pageHelpers from "./helpers/pageHelpers.js";
 
 const app = express();
 
@@ -30,6 +31,9 @@ app.engine(
       runtimeOptions: {
          allowProtoMethodsByDefault: true,
          allowProtoPropertiesByDefault: true,
+      },
+      helpers: {
+         ...pageHelpers,
       },
    })
 );

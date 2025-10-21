@@ -10,7 +10,7 @@ export async function isMovieCreator(req, res, next) {
    const movie = await movieService.getOne(movieId);
 
    //  Validate if user is creator
-   if (movie.creator !== req.user.id) {
+   if (!movie.creator.equals(req.user.id)) {
       return res.status(401).render("404", "Only the creator can edit this movie!");
    }
 
