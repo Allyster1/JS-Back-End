@@ -216,7 +216,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Bonuses
 
--  [] Guard edit from non creator
+-  [x] Guard edit from non creator
 -  [] Redirect with message
 -  [] Add dynamic year check to movie schema
 -  [] Character name
