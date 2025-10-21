@@ -9,7 +9,7 @@ const movieController = Router();
 
 movieController.get("/create", isAuth, (req, res) => {
    if (req.isAuthenticated) {
-      console.log(req.user.email);
+      console.log(req.user.email, { categories: getMovieCategoryViewData });
    }
 
    res.render("movies/create");
