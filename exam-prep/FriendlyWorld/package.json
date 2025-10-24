@@ -1,0 +1,14 @@
+{
+   "name": "friendlyworld",
+   "version": "1.0.0",
+   "description": "Friendly World Exam Prepation",
+   "main": "index.js",
+   "scripts": {
+      "start": "node src/index.js",
+      "dev": "node --watch src/index.js"
+   },
+   "type": "module",
+   "keywords": [],
+   "author": "",
+   "license": "ISC"
+}
