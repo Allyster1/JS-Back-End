@@ -10,3 +10,12 @@
 -  [x] Add dev script
 -  [x] Config debugger
 -  [x] Add resources
+
+### 2. Expres
+
+-  [x] Install express and init a server `npm i express`
+-  [] Setup static middleware
+-  [] Add body parser
+-  [] Add home controller
+-  [] Add route file
+-  [] Add error controller
