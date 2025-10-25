@@ -1,11 +1,12 @@
 import express from "express";
 import handlebars from "express-handlebars";
 import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
+import "dotenv/config";
 
 import routes from "./routes.js";
-import cookieParser from "cookie-parser";
-
 import { authMiddleware } from "./middlewares/authMiddleware.js";
+import pageHelpers from "./views/helpers/pageHelpers.js";
 
 const app = express();
 
@@ -29,12 +30,7 @@ app.engine(
          allowProtoMethodsByDefault: true,
       },
       helpers: {
-         setTitle(title) {
-            this.pageTitle = title;
-         },
-         getTitle() {
-            return this.pageTitle || "Friendly World";
-         },
+         ...pageHelpers,
       },
    })
 );
@@ -58,4 +54,4 @@ app.use(authMiddleware);
 // Routes
 app.use(routes);
 
-app.listen(5000, () => console.log("Server is running on port http://localhost:5000"));
+app.listen(process.env.PORT, () => console.log(`Server is running on port http://localhost:${process.env.PORT}`));

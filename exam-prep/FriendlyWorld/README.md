@@ -116,6 +116,9 @@
 
 ### Bonus
 
--  [] Add env variable for debugging
--  [] Add global error handler
--  [] Add bundler
+-  [x] Export helpers into separate module
+-  [x] Add env variable for debuging
+-  [ ] Add global error handler
+-  [ ] Add bundler
+-  [ ] Use async jwt
+-  [ ] Refresh token
