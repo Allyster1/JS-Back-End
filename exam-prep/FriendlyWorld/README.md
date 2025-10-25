@@ -1,124 +1,104 @@
-# SoftUni JS Back-End Exam Preparation Cheat Sheet
+# FriendlyWorld
 
-## Create Skeleton Project
+FriendlyWorld is a Node.js / JavaScript backend project intended as a practical exam for Softuni's JS Back-End (2025) course.
 
-### 1. Initialize Project
+---
 
--  [x] Initialize npm project `npm init -y`
--  [x] Change module system
--  [x] Add start file `/src/index.js`
--  [x] Add dev script
--  [x] Config debugger
--  [x] Add resources
+## 🏗 Project Structure - Three-Tier Architecture
 
-### 2. Expres
+```
+src/
+├── controllers/         # HTTP request handlers
+├── middleware/          # Auth, error handling, etc.
+├── models/              # Database schemas / models
+├── public/              # Static files (css and images)
+├── services/            # Business logic
+├── utils/               # Helper functions (e.g. JWT utils, hashing)
+├── views/
+   ├── helpers - pageHelpers.js           # Helper for dynamic page title
+   ├── layouts                            # Main layout with header/footer
+   ├── home.hbs                           # Home page template
+   ├── 404.hbs                            # 404 page template
+   └── partials/                          # Reusable partial templates
+└── index.js                              # Entry point / server setup
 
--  [x] Install express `npm i express`
--  [x] init a server
--  [x] Setup static middleware
--  [x] Add body parser
--  [x] Add home controller
--  [x] Add route file
--  [x] Add error controller
+generateSecret.js        # Optional function for generating a JWT Secret
 
-### 3. Handlebars
+.env                     # Environment variables
+.env.example             # Template file for required env vars
+.gitignore               # Exclude .env and other sensitive files
+package.json             # Dependencies, scripts, metadata
+```
 
--  [x] Install handlebars `npm i express-handlebars`
--  [x] Config hanlebars engine
--  [x] Use handlebars engine
--  [x] Config handlebars file extension
--  [x] Set views folder
--  [x] Add home view
--  [x] Render home view without layout `res.render('home', {layout: false});`
--  [x] Fix asset paths
--  [x] Add layout
--  [x] Add partials dir
--  [x] Config handlebars to work with mongoose documents `runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
+---
 
-### 4. Database
+## ✅ Setup / Getting Started
 
--  [x] Install mongoose `npm i mongoose`
--  [x] Connect to db
--  [x] Add error handling on connect
--  [x] Add simple user model
+<!-- 1. **Clone the repo**
 
-### 5. Register
+   ```bash
+   git clone https://github.com/Allyster1/JS-Back-End.git
+   cd JS-Back-End/exam-prep/FriendlyWorld
+   ``` -->
 
--  [x] Fix navigation links
--  [x] Add user controller
--  [x] Add user controller to routes
--  [x] Create register view
--  [x] Render register view
--  [x] Modify register form
--  [x] Create post route for register
--  [x] Create user service
--  [x] Redirect after successfull register
--  [x] Instal bcrypt `npm i bcrypt`
--  [x] Hash passwords before safe
--  [x] BONUS: Check if user exists
+<!-- 1. **Copy `.env.example` to `.env`**
 
-### 6. Login
+   ```bash
+   cp .env.example .env
+   ```
 
--  [x] Fix login navigation link
--  [x] Add login view
--  [x] Add get login action
--  [x] Fix login form
--  [x] Add post login acion
--  [x] Add login method in userService
--  [x] Validate if user exists
--  [x] Validate password
--  [x] Install jsonwebtoke `npm i jsonwebtoken`
--  [x] Generate token
--  [x] Call userService from userController
--  [x] Send token as cookie
--  [x] Redirect to homepage
--  [x] BONUS: Extract jwt secret to constant or env
--  [x] Auto login on register
+   (Then fill in actual values: database URI, JWT secret, etc.) -->
 
-### 7. Logout
+1. **Install dependencies**
 
--  [x] Add logout navigation link
--  [x] Add logout action
+   ```bash
+   npm install
+   ```
 
-### 8. Authentication
+2. **Optional: generate a new JWT secret**
 
--  [x] Install and use cookie-parser `npm i cookie-parser`
--  [x] Create auth middleware
-   -  [x] Allow if guest (no token)
-   -  [x] Verify token (clear session if invalid)
-   -  [x] Attach decoded token to req.user (if token is valid)
--  [x] Use auth middleware
+   ```bash
+   npm run generate-secret
+   ```
 
-### 9. Authorization
+   (Paste new secret into your JWT_SECRET at `.env` afterwards.)
 
--  [x] Create isAuth middleware
--  [x] Create isGuest middleware
--  [x] Add route guards
--  [x] Add not found page
+3. **Run the app in development**
 
-### 10. Dynamic Content
+   ```bash
+   npm run dev
+   ```
 
--  [x] Add user data to handlebars context
--  [x] Dynamic navigation
--  [x] Dynamic titles
--  [x] BONUS: Set page title from view
+---
 
-### 11. Error handling and validation
+## 🔐 Environment variables & JWT / Secrets
 
--  [x] Add error message in notification
--  [x] Notification conditional rendering
--  [x] Create getErrorMessage util function
--  [x] Add error handling for register
--  [x] Add register form data persistance
--  [x] Check repeatPassword in service
--  [x] BONUS: Check repeatPassword in model
--  [x] Error handling and data persistance on login
+-  **Environment variables**
+   Uses `.env.example / .env` to define what environment variables the project needs (e.g. `PORT`, `MONGODB_URI`, `JWT_SECRET`).
 
-### Bonus
+-  **JWT / Secrets**
 
--  [x] Export helpers into separate module
--  [x] Add env variable for debuging
--  [x] Add global error handler
--  [ ] Add bundler
--  [ ] Use async jwt
--  [ ] Refresh token
+   -  Use `crypto.randomBytes(...)` to generate a strong secret (e.g. 64 bytes).
+   -  Store it in env (via `.env`) and load via `dotenv` or similar.
+   -  Don’t regenerate the secret on every startup — that would invalidate existing tokens.
+
+## 🛠 Scripts (in `package.json`)
+
+-  `npm run dev` — Run in development mode (with auto-reload)
+-  `npm start` — Run in production mode
+-  `npm run generate-secret` (optional) — Generates the JWT Secret
+
+---
+
+## 🧾 Sample `.env.example`
+
+```
+# Server
+PORT=3000
+
+# MongoDB
+MONGODB_URI=mongodb://localhost:27017/friendlyworld
+
+# JWT secret
+JWT_SECRET=your_jwt_secret_here
+```
