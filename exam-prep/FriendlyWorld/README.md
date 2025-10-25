@@ -42,7 +42,37 @@
 -  [x] Add error handling on connect
 -  [x] Add simple user model
 
+### 5. Register
+
+-  [x] Fix navigation links
+-  [x] Add user controller
+-  [x] Add user controller to routes
+-  [x] Create register view
+-  [x] Render register view
+-  [x] Modify register form
+-  [x] Create post route for register
+-  [x] Create user service
+-  [x] Redirect after successfull register
+-  [x] Instal bcrypt `npm i bcrypt`
+-  [x] Hash passwords before safe
+-  [x] BONUS: Check if user exists
+
+### 6. Login
+
+### 7. Logout
+
+### 8. Authentication
+
+### 9. Authorizarion
+
+### 10. Dynamic Content
+
+### 11. Error handling and validation
+
+-  [] Check repeatPassword
+
 ### Bonus
 
 -  [] Add env variable for debugging
 -  [] Add global error handler
+-  [] Add bundler
