@@ -23,17 +23,17 @@
 
 ### 3. Handlebars
 
--  [] Install handlebars `npm i express-handlebars`
--  [] Config hanlebars engine
--  [] Use handlebars engine
--  [] Config handlebars file extension
--  [] Set views folder
--  [] Add home view
--  [] Render home view without layout `res.render('home', {layout: false});`
--  [] Fix asset paths
--  [] Add layout
--  [] Add partials dir
--  [] Config handlebars to work with mongoose documents `runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
+-  [x] Install handlebars `npm i express-handlebars`
+-  [x] Config hanlebars engine
+-  [x] Use handlebars engine
+-  [x] Config handlebars file extension
+-  [x] Set views folder
+-  [x] Add home view
+-  [x] Render home view without layout `res.render('home', {layout: false});`
+-  [x] Fix asset paths
+-  [x] Add layout
+-  [x] Add partials dir
+-  [x] Config handlebars to work with mongoose documents `runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
 
 ### Bonus
 

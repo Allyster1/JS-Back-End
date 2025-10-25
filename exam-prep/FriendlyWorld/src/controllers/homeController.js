@@ -3,8 +3,7 @@ import { Router } from "express";
 const homeController = Router();
 
 homeController.get("/", (req, res) => {
-   console.log(req.body);
-   res.send("it works!");
+   res.render("home");
 });
 
 homeController.post("/", (req, res) => {
