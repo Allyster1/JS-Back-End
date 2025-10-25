@@ -19,5 +19,8 @@
       "express-handlebars": "^8.0.3",
       "jsonwebtoken": "^9.0.2",
       "mongoose": "^8.19.2"
+   },
+   "devDependencies": {
+      "crypto": "^1.0.1"
    }
 }

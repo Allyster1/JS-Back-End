@@ -14,7 +14,7 @@ const app = express();
 
 // Setup Database
 try {
-   await mongoose.connect("mongodb://localhost:27017", {
+   await mongoose.connect(process.env.MONGODB_URI, {
       dbName: "Friendly-world",
    });
    console.log("Database connected successfully!");
