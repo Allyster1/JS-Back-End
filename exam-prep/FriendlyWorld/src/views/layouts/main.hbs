@@ -5,16 +5,17 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="/styles/styles.css" />
-      <title>Home Page</title>
+      <title>{{getTitle}}</title>
    </head>
 
    <body>
-
-      <div>
-         <div class="errorContainer">
-            <p>Error</p>
+      {{#if error}}
+         <div>
+            <div class="errorContainer">
+               <p>{{error}}</p>
+            </div>
          </div>
-      </div>
+      {{/if}}
 
       <div id="wrapper">
          <header>
@@ -27,16 +28,19 @@
                </div>
 
                <!-- Logged-in users -->
-               <div class="user">
-                  <a href="#">Add Animal</a>
-                  <a href="/users/logout">Logout</a>
-               </div>
+               {{#if isAuthenticated}}
+                  <div class="user">
+                     <a href="#">Add Animal</a>
+                     <a href="/users/logout">Logout</a>
+                  </div>
 
-               <!-- Guest users -->
-               <div class="guest">
-                  <a href="/users/login">Login</a>
-                  <a href="/users/register">Register</a>
-               </div>
+               {{else}}
+                  <!-- Guest users -->
+                  <div class="guest">
+                     <a href="/users/login">Login</a>
+                     <a href="/users/register">Register</a>
+                  </div>
+               {{/if}}
             </nav>
          </header>
 

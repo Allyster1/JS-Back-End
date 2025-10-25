@@ -12,6 +12,21 @@ const userSchema = new Schema({
    },
 });
 
+// userSchema
+//    .virtual("repeatPassword")
+//    .get(function () {
+//       return this._repeatPassword;
+//    })
+//    .set(function (value) {
+//       this._repeatPassword = value;
+//    });
+
+// userSchema.pre("validate", async function () {
+//    if (this.isNew && this.password !== this._repeatPassword) {
+//       throw new Error("Password missmatch");
+//    }
+// });
+
 userSchema.pre("save", async function () {
    this.password = await bcrypt.hash(this.password, 12);
 });

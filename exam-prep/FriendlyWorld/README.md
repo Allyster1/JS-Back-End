@@ -89,13 +89,30 @@
    -  [x] Attach decoded token to req.user (if token is valid)
 -  [x] Use auth middleware
 
-### 9. Authorizarion
+### 9. Authorization
+
+-  [x] Create isAuth middleware
+-  [x] Create isGuest middleware
+-  [x] Add route guards
+-  [x] Add not found page
 
 ### 10. Dynamic Content
 
+-  [x] Add user data to handlebars context
+-  [x] Dynamic navigation
+-  [x] Dynamic titles
+-  [x] BONUS: Set page title from view
+
 ### 11. Error handling and validation
 
--  [] Check repeatPassword
+-  [x] Add error message in notification
+-  [x] Notification conditional rendering
+-  [x] Create getErrorMessage util function
+-  [x] Add error handling for register
+-  [x] Add register form data persistance
+-  [x] Check repeatPassword in service
+-  [x] BONUS: Check repeatPassword in model
+-  [x] Error handling and data persistance on login
 
 ### Bonus
 
