@@ -126,4 +126,6 @@
 ## Steps to Use from Sekeleton Project
 
 -  [x] Install dependancies `npm i`
--  [] replace resources
+-  [x] replace resources `src/public`
+-  [x] Add html files to views folder
+-  [x] Rename dataBase name in index.js

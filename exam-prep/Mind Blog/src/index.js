@@ -15,7 +15,7 @@ const app = express();
 // Setup Database
 try {
    await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "Friendly-world",
+      dbName: "Mind-Blog",
    });
    console.log("Database connected successfully!");
 } catch (err) {
