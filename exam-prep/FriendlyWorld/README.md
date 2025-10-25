@@ -82,6 +82,13 @@
 
 ### 8. Authentication
 
+-  [x] Install and use cookie-parser `npm i cookie-parser`
+-  [x] Create auth middleware
+   -  [x] Allow if guest (no token)
+   -  [x] Verify token (clear session if invalid)
+   -  [x] Attach decoded token to req.user (if token is valid)
+-  [x] Use auth middleware
+
 ### 9. Authorizarion
 
 ### 10. Dynamic Content
