@@ -5,8 +5,10 @@ import cookieParser from "cookie-parser";
 import "dotenv/config";
 
 import routes from "./routes.js";
-import { authMiddleware } from "./middlewares/authMiddleware.js";
 import pageHelpers from "./views/helpers/pageHelpers.js";
+
+import { authMiddleware } from "./middlewares/authMiddleware.js";
+// import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 
 const app = express();
 
@@ -53,5 +55,8 @@ app.use(authMiddleware);
 
 // Routes
 app.use(routes);
+
+// Global Error Handling
+// app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => console.log(`Server is running on port http://localhost:${process.env.PORT}`));
