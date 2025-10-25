@@ -1,0 +1,24 @@
+{
+   "name": "friendlyworld",
+   "version": "1.0.0",
+   "description": "Friendly World Exam Prepation",
+   "main": "src/index.js",
+   "scripts": {
+      "start": "node src/index.js",
+      "dev": "node --watch src/index.js",
+      "generate-secret": "node generateJWTSecret.js"
+   },
+   "type": "module",
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "bcrypt": "^6.0.0",
+      "cookie-parser": "^1.4.7",
+      "dotenv": "^17.2.3",
+      "express": "^5.1.0",
+      "express-handlebars": "^8.0.3",
+      "jsonwebtoken": "^9.0.2",
+      "mongoose": "^8.19.2"
+   }
+}
