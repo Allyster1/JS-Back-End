@@ -13,9 +13,29 @@
 
 ### 2. Expres
 
--  [x] Install express and init a server `npm i express`
--  [] Setup static middleware
--  [] Add body parser
--  [] Add home controller
--  [] Add route file
--  [] Add error controller
+-  [x] Install express `npm i express`
+-  [x] init a server
+-  [x] Setup static middleware
+-  [x] Add body parser
+-  [x] Add home controller
+-  [x] Add route file
+-  [x] Add error controller
+
+### 3. Handlebars
+
+-  [] Install handlebars `npm i express-handlebars`
+-  [] Config hanlebars engine
+-  [] Use handlebars engine
+-  [] Config handlebars file extension
+-  [] Set views folder
+-  [] Add home view
+-  [] Render home view without layout `res.render('home', {layout: false});`
+-  [] Fix asset paths
+-  [] Add layout
+-  [] Add partials dir
+-  [] Config handlebars to work with mongoose documents `runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
+
+### Bonus
+
+-  [] Add env variable for debugging
+-  [] Add global error handler

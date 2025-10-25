@@ -1,9 +1,16 @@
 import express from "express";
 
+import routes from "./routes.js";
+
 const app = express();
 
-app.get("/", (req, res) => {
-   res.send("it works!").end();
-});
+// Static middleware
+app.use(express.static("src/public"));
 
-app.listen(3000, () => console.log("Server is running on port http://localhost:3000"));
+// Body parser
+app.use(express.urlencoded({ extended: false }));
+
+// Routes
+app.use(routes);
+
+app.listen(5000, () => console.log("Server is running on port http://localhost:5000"));
