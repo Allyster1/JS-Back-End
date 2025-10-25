@@ -35,6 +35,13 @@
 -  [x] Add partials dir
 -  [x] Config handlebars to work with mongoose documents `runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
 
+### 4. Database
+
+-  [x] Install mongoose `npm i mongoose`
+-  [x] Connect to db
+-  [x] Add error handling on connect
+-  [x] Add simple user model
+
 ### Bonus
 
 -  [] Add env variable for debugging

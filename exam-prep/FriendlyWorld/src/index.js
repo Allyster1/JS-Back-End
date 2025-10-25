@@ -1,9 +1,20 @@
 import express from "express";
 import handlebars from "express-handlebars";
+import mongoose from "mongoose";
 
 import routes from "./routes.js";
 
 const app = express();
+
+// Setup Database
+try {
+   await mongoose.connect("mongodb://localhost:27017", {
+      dbName: "Friendly-world",
+   });
+   console.log("Database connected successfully!");
+} catch (err) {
+   console.error("Cannot connect to database", err.message);
+}
 
 // Config handlebars
 app.engine(
