@@ -1,36 +1,28 @@
 {{setTitle "Home Page"}}
 
-<!-- Home page -->
-<main class="home">
-   <section id="home">
-      <h1>Welcome to Friendly World</h1>
-      <h2>Let's help together</h2>
-      <h3>We are global animal welfare organisation for animals under direct human influence, which reveals suffering,
-         rescues animals in need and protects them. Our vision is a world where humans treat animals with respect,
-         empathy and understanding.</h3>
-   </section>
+<div class="container">
+   <div class="blog-message">
+      <h1 id="site-title">Blog</h1>
+      <h2 id="site-mid-title">Create your own world!</h2>
+   </div>
 
-   <section id="last-added">
-      <div>
-         <img src="/images/animal4.jpg" />
-         <p>Name: Blue</p>
-         <p>Need of: Medicine</p>
-         <a class="details-btn" href="#">Details</a>
-      </div>
-      <div>
-         <img src="/images/animal5.webp" />
-         <p>Name: Rikky</p>
-         <p>Need of: Food</p>
-         <a class="details-btn" href="#">Details</a>
-      </div>
-      <div>
-         <img src="/images/animla6.jpg" />
-         <p>Name: Wenny</p>
-         <p>Need of: Money for operation</p>
-         <a class="details-btn" href="#">Details</a>
+   {{#if blogs}}
+      <div class="last-blogs">
+         {{#each blogs}}
+            <div class="info">
+               <h2 class="title">{{title}}</h2>
+               <h4 class="genre">{{category}}</h4>
+               <div class="see-more">
+                  <a href="/blogs/{{id}}/details">See More...</a>
+               </div>
+            </div>
+         {{/each}}
       </div>
 
-      <!--  <p class="no-post">There are no animals in need!</p> -->
-
-   </section>
-</main>
+   {{else}}
+      {{! If there are still no blog posts on the database }}
+      <article class="not-available-blogs">
+         <h1>No blogs created yet.</h1>
+      </article>
+   {{/if}}
+</div>

@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="/styles/styles.css" />
+      <link rel="stylesheet" href="/css/styles.css" />
       <title>{{getTitle}}</title>
    </head>
 
@@ -17,39 +17,34 @@
          </div>
       {{/if}}
 
-      <div id="wrapper">
-         <header>
-            <!-- Navigation -->
-            <nav>
-               <div>
-                  <a href="/">Home</a>
-                  <a href="#">Dashboard</a>
-                  <a href="#">Search</a>
-               </div>
+      <div class="navigation">
+         <nav>
+            <img src="/images/logo.jpg" />
+            <ul>
+               <!-- Guest users and Logged users -->
+               <li><a href="/">Home</a></li>
+               <li><a href="/blogs">Blogs</a></li>
 
-               <!-- Logged-in users -->
                {{#if isAuthenticated}}
-                  <div class="user">
-                     <a href="#">Add Animal</a>
-                     <a href="/users/logout">Logout</a>
-                  </div>
-
+                  <!--For loggin users-->
+                  <li><a href="/profile">Profile</a></li>
+                  <li><a href="/blogs/create">Create Blog</a></li>
+                  <li><a href="/users/logout">Logout</a></li>
                {{else}}
-                  <!-- Guest users -->
-                  <div class="guest">
-                     <a href="/users/login">Login</a>
-                     <a href="/users/register">Register</a>
-                  </div>
+                  <!--For guest users-->
+                  <li><a href="/users/login">Login</a></li>
+                  <li><a href="/users/register">Register</a></li>
                {{/if}}
-            </nav>
-         </header>
 
-         {{{body}}}
-
-         <footer>
-            <p>@Friendly World</p>
-         </footer>
+            </ul>
+         </nav>
       </div>
+
+      <main>
+         {{{body}}}
+      </main>
+
+      <footer>Back-End 2022</footer>
    </body>
 
 </html>

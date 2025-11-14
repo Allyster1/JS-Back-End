@@ -14,7 +14,7 @@
 ### 2. Expres
 
 -  [x] Install express `npm i express`
--  [x] init a server
+-  [x] Init express server
 -  [x] Setup static middleware
 -  [x] Add body parser
 -  [x] Add home controller
@@ -96,14 +96,14 @@
 -  [x] Add route guards
 -  [x] Add not found page
 
-### 10. Dynamic Content
+### 10. Dynamic content
 
 -  [x] Add user data to handlebars context
 -  [x] Dynamic navigation
 -  [x] Dynamic titles
 -  [x] BONUS: Set page title from view
 
-### 11. Error handling and validation
+### 11. Error handling and Validation
 
 -  [x] Add error message in notification
 -  [x] Notification conditional rendering
@@ -123,9 +123,100 @@
 -  [ ] Use async jwt
 -  [ ] Refresh token
 
-## Steps to Use from Sekeleton Project
+## Steps to Use the Skeleton Project
 
--  [x] Install dependancies `npm i`
--  [x] replace resources `src/public`
--  [x] Add html files to views folder
--  [x] Rename dataBase name in index.js
+-  [x] Install dependencies `npm i`
+-  [x] Remove old resources and add new resources `/src/public`
+-  [x] Add html files to the views folder
+-  [x] Rename database name
+-  [x] Replace layout
+   -  [x] Dynamic title
+   -  [x] Fix resource routes
+   -  [x] Error notification
+   -  [x] Body
+   -  [x] Dynamic Navigation
+-  [] Replace home page
+-  [x] Modify navigation links
+-  [x] Replace login page
+-  [x] Replace register page
+-  [x] Replace 404 page
+
+## Solve Mind Blog Exam Prep
+
+### Create Blog Page
+
+-  [x] Fix create blog navigation link
+-  [x] Add blog controller
+-  [x] Add controller to routes
+-  [x] Add create action with render
+-  [x] Add myths folder in views
+-  [x] Add create myth view
+-  [x] Add myth model
+-  [x] Modify create blog form
+-  [x] Create blog post action
+-  [x] Create blog service with create method
+-  [x] Add owner on blog creation
+-  [x] Add error handling
+
+### Blogs Catalog Page
+
+-  [x] Fix navigation link
+-  [x] Add catalog view
+-  [x] Add get catalog action with static blogs
+-  [x] Get all blogs service
+-  [x] Show dynamic blogs
+-  [] Fix details page link
+
+### Home page blogs
+
+-  [] Add get latest blogs in blog service
+-  [] Show dynamic lastest blogs on home
+
+### Blog details
+
+-  [x] Fix details link in blogs page
+-  [x] Fix details link in home page
+-  [x] Show static details page
+-  [x] Add getOne method in blog service
+-  [x] Show dynamic details page (without author and followers)
+-  [x] Show dynamic author
+-  [x] Hide buttons if not logged
+-  [] Show edit and delete button if author
+-  [] Show follow and already following buttons if logged
+-  [] Implement follow functionallity
+   -  [x] Add followers in blog relation
+   -  [x] Add follow action
+   -  [x] Add follow service method
+   -  [x] Fix follow link
+-  [x] Show dynamic follwers
+-  [x] Show follow button or already following buttons conditionally
+
+### Delete blog
+
+-  [] Fix navigation link in details
+-  [] Add delete action
+-  [] Add delete method in blog service
+
+### Edit blog
+
+-  [x] Fix navigation link in details
+-  [x] Add get edit action
+-  [x] Show empty edit page
+-  [x] Populate edit form with blog data
+-  [x] Add post edit action
+-  [x] Add edit method in blog service
+-  [x] Add error handling
+
+### Profile
+
+-  [x] Fix navigation link
+-  [x] Show static profile page
+-  [x] Show dynamic user information
+-  [x] Show created blogs
+-  [x] Show followed blogs
+
+## Validation and error handling
+
+### Bonus
+
+-  [ ] Fix sort(\_id) problem

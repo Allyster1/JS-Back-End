@@ -2,12 +2,19 @@ import { Schema, model } from "mongoose";
 import bcrypt from "bcrypt";
 
 const userSchema = new Schema({
+   username: {
+      type: String,
+      minLength: [5, "Username should be at least 5 characters"],
+      required: [true, "Username is required!"],
+   },
    email: {
       type: String,
+      minLength: [10, "Email should be at least 10 characters"],
       required: [true, "Email is required!"],
    },
    password: {
       type: String,
+      minLength: [4, "Password should be at least 4 characters"],
       required: [true, "Password is required!"],
    },
 });

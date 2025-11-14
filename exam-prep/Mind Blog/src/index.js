@@ -8,7 +8,7 @@ import routes from "./routes.js";
 import pageHelpers from "./views/helpers/pageHelpers.js";
 
 import { authMiddleware } from "./middlewares/authMiddleware.js";
-// import { errorMiddleware } from "./middlewares/errorMiddleware.js";
+import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 
 const app = express();
 
@@ -57,6 +57,6 @@ app.use(authMiddleware);
 app.use(routes);
 
 // Global Error Handling
-// app.use(errorMiddleware);
+app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => console.log(`Server is running on port http://localhost:${process.env.PORT}`));

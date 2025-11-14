@@ -14,7 +14,7 @@ export async function register(email, password, repeatPassword) {
       throw new Error("Password missmatch");
    }
 
-   const createdUser = await User.create({ email, password });
+   const createdUser = await User.create({ email, password, repeatPassword });
 
    const token = generateAuthToken(createdUser);
 
